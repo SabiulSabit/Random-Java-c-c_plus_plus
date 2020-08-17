@@ -22,4 +22,9 @@ public class Drinks {
         this.brandName=brandName;
     }
     
+     public void display(){
+        System.out.println("Pizza Name: "+name);
+        System.out.println("Pizza Brand: "+brandName);
+        System.out.println("Pizza Price: "+price);
+    }
 }
