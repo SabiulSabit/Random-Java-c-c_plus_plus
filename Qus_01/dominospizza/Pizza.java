@@ -20,4 +20,10 @@ public class Pizza {
         this.name=name;
         this.flavorName=flavorName;
     }
+    
+    public void display(){
+        System.out.println("Pizza Name: "+name);
+        System.out.println("Pizza Flavor: "+flavorName);
+        System.out.println("Pizza Price: "+price);
+    }
 }
