@@ -1,0 +1,30 @@
+Merge-Sort(numbers[], p, r) 
+    if p < r then  
+	q = ⌊(p + r) / 2⌋ 
+    Merge-Sort (numbers[], p, q) 
+    Merge-Sort (numbers[], q + 1, r) 
+    Merge (numbers[], p, q, r)
+
+Merge (numbers[], p, q, r)
+   n1 = q – p + 1 
+   n2 = r – q 
+   declare leftnums[1…n1 + 1] and rightnums[1…n2 + 1] temporary arrays 
+   
+   for i = 1 to n1 
+      leftnums[i] = numbers[p + i - 1] 
+
+   for j = 1 to n2 
+     rightnums[j] = numbers[q+ j] 
+
+   leftnums[n1 + 1] = ∞ 
+   rightnums[n2 + 1] = ∞ 
+   i = 1 
+   j = 1 
+   for k = p to r 
+      if leftnums[i] ≤ rightnums[j] 
+         numbers[k] = leftnums[i] 
+         i = i + 1 
+      else
+         numbers[k] = rightnums[j] 
+         j = j + 1 
+
